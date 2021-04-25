@@ -1,4 +1,5 @@
 import React from "react";
+import { csv } from "d3-fetch";
 
 const viewHeight = 500;
 const viewWidth = 500;
@@ -26,16 +27,19 @@ const App = () => {
 //         Price history of 100 randomly selected Pokemon cards
 //     </text>
 // </svg> 
-
+    csv(
+        "https://raw.githubusercontent.com/DorisLL/react-parcel-example-1/main/data/education.csv"
+    )
+    // fetch(
+    //     "https://raw.githubusercontent.com/DorisLL/react-parcel-example-1/main/data/education.csv"
+    // )
+    //     .then((response) => response.json())
+        .then((data) => console.log(data));
     return (
         <div>
-            <p>from App rerender</p>
-            <p>now for a worldview demo</p>
-            <p>class on April 13</p>
-            <p> blue </p>
-            {/* <div style={{ width:"50vw", height:"50vh"}}>
-                <WorldviewDemo />
-            </div> */}
+            <h1>Exploratory Data Analysis, Assignment 2, INFO 474 SP 2021</h1>
+            <p>Data!</p>
+
         </div>
     );
 };
