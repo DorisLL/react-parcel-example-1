@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.html",
   "scripts": {
-    "start":"parcel index.html",
+    "start": "parcel index.html",
     "build": "parcel build index.html --public-url https://DorisLL.github.io/react-parcel-example-1/; rm -rf docs; mv dist docs;",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
