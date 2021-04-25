@@ -26273,46 +26273,293 @@ try {
   var _react = require("react");
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _d3Fetch = require("d3-fetch");
-  require("react-router-dom");
+  var _reactRouterDom = require("react-router-dom");
   var _jsxFileName = "/Users/syl/Desktop/INFO474/react-parcel-example-1/src/App.js";
-  // const viewHeight = 500;
-  // const viewWidth = 500;
-  // const circleCX = 50;
-  const App = () => {
+  function App() {
     _d3Fetch.csv("https://raw.githubusercontent.com/DorisLL/react-parcel-example-1/main/data/education.csv").// fetch(
     // "https://raw.githubusercontent.com/DorisLL/react-parcel-example-1/main/data/education.csv"
     // )
     // .then((response) => response.json())
     then(data => console.log(data));
     return (
-      /*#__PURE__*/_reactDefault.default.createElement("div", {
-        __self: undefined,
+      /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+        __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 24,
           columnNumber: 9
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
-        __self: undefined,
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 25,
           columnNumber: 13
         }
-      }, "Exploratory Data Analysis, Assignment 2, INFO 474 SP 2021"), /*#__PURE__*/_reactDefault.default.createElement("p", {
-        __self: undefined,
+      }, /*#__PURE__*/_reactDefault.default.createElement("ul", {
+        __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 26,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("li", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28,
+          columnNumber: 25
+        }
+      }, "Dashboard")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/assignment2",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31,
+          columnNumber: 25
+        }
+      }, "Assignment2")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/assignment3",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 34,
+          columnNumber: 25
+        }
+      }, "Assignment3")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/assignment4",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37,
+          columnNumber: 25
+        }
+      }, "Assignment4"))), /*#__PURE__*/_reactDefault.default.createElement("hr", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        exact: true,
+        path: "/",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(Dashboard, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44,
+          columnNumber: 25
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        exact: true,
+        path: "/assignment2",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(Assignment2, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47,
+          columnNumber: 25
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/assignment3",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(Assignment3, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50,
+          columnNumber: 25
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/assignment4",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(Assignment4, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53,
+          columnNumber: 25
+        }
+      })))))
+    );
+  }
+  exports.default = App;
+  _c = App;
+  // You can think of these components as "pages"
+  // in your app.
+  function Dashboard() {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67,
+          columnNumber: 9
+        }
+      }, "Dashboard"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68,
+          columnNumber: 9
+        }
+      }, "Quarter: Spring 2021"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69,
+          columnNumber: 9
+        }
+      }, "Name: Doris Liu"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70,
+          columnNumber: 9
+        }
+      }, "Course: INFO 474"))
+    );
+  }
+  _c2 = Dashboard;
+  function Assignment2() {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78,
+          columnNumber: 13
+        }
+      }, "Assignment 2: Exploratory Data Analysis"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 79,
           columnNumber: 13
         }
       }, "Data!"))
     );
-  };
-  _c = App;
-  exports.default = App;
-  var _c;
+  }
+  _c3 = Assignment2;
+  function Assignment3() {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 86,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 87,
+          columnNumber: 9
+        }
+      }, "Assignment3"))
+    );
+  }
+  _c4 = Assignment3;
+  function Assignment4() {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 94,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95,
+          columnNumber: 9
+        }
+      }, "Assignment4"))
+    );
+  }
+  _c5 = Assignment4;
+  var _c, _c2, _c3, _c4, _c5;
   $RefreshReg$(_c, "App");
+  $RefreshReg$(_c2, "Dashboard");
+  $RefreshReg$(_c3, "Assignment2");
+  $RefreshReg$(_c4, "Assignment3");
+  $RefreshReg$(_c5, "Assignment4");
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
