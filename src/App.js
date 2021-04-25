@@ -19,7 +19,7 @@ const App = () => {
     //     "https://raw.githubusercontent.com/DorisLL/react-parcel-example-1/main/data/education.csv"
     // )
     //     .then((response) => response.json())
-        .then((data) => console.log(data));
+    .then((data) => console.log(data));
     return (
         <div>
             <h1>Exploratory Data Analysis, Assignment 2, INFO 474 SP 2021</h1>
