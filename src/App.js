@@ -11,24 +11,110 @@ import {
 // const viewWidth = 500;
 // const circleCX = 50;
 
-const App = () => {
+export default function App() {
     csv(
         "https://raw.githubusercontent.com/DorisLL/react-parcel-example-1/main/data/education.csv"
     )
     // fetch(
     //     "https://raw.githubusercontent.com/DorisLL/react-parcel-example-1/main/data/education.csv"
     // )
-    //     .then((response) => response.json())
+    // .then((response) => response.json())
     .then((data) => console.log(data));
     return (
+        <Router>
+            <div>
+                <ul>
+                    <li>
+                        <Link to="/">Dashboard</Link>
+                    </li>
+                    <li>
+                        <Link to="/assignment2">Assignment2</Link>
+                    </li>
+                    <li>
+                        <Link to="/assignment3">Assignment3</Link>
+                    </li>
+                    <li>
+                        <Link to="/assignment4">Assignment4</Link>
+                    </li>
+                </ul>
+                <hr />
+
+                <Switch>
+                    <Route exact path="/">
+                        <Dashboard />
+                    </Route>
+                    <Route exact path="/assignment2">
+                        <Assignment2 />
+                    </Route>
+                    <Route path="/assignment3">
+                        <Assignment3 />
+                    </Route>
+                    <Route path="/assignment4">
+                        <Assignment4 />
+                    </Route>
+                </Switch>
+            </div>
+        </Router>
+    );
+  }
+  
+  // You can think of these components as "pages"
+  // in your app.
+  
+  function Dashboard() {
+    return (
+      <div>
+        <h2>Dashboard</h2>
+        <p>Quarter: Spring 2021</p>
+        <p>Name: Doris Liu</p>
+        <p>Course: INFO 474</p>
+      </div>
+    );
+  }
+
+  function Assignment2() {
+    return (
         <div>
-            <h1>Exploratory Data Analysis, Assignment 2, INFO 474 SP 2021</h1>
+            <h1>Assignment 2: Exploratory Data Analysis</h1>
             <p>Data!</p>
         </div>
     );
-}
+  }
+  
+  function Assignment3() {
+    return (
+      <div>
+        <h2>Assignment3</h2>
+      </div>
+    );
+  }
+  
+  function Assignment4() {
+    return (
+      <div>
+        <h2>Assignment4</h2>
+      </div>
+    );
+  }
 
-export default App;
+// const App = () => {
+//     csv(
+//         "https://raw.githubusercontent.com/DorisLL/react-parcel-example-1/main/data/education.csv"
+//     )
+//     // fetch(
+//     //     "https://raw.githubusercontent.com/DorisLL/react-parcel-example-1/main/data/education.csv"
+//     // )
+//     //     .then((response) => response.json())
+//     .then((data) => console.log(data));
+//     return (
+//         <div>
+//             <h1>Exploratory Data Analysis, Assignment 2, INFO 474 SP 2021</h1>
+//             <p>Data!</p>
+//         </div>
+//     );
+// }
+
+// export default App;
 
 
 
