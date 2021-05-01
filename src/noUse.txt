@@ -1,0 +1,59 @@
+<h3><h3>Q2: </h3></h3>
+            <svg 
+              width={size} 
+              height={size}  
+              style={{ border: "1px solid black" }}>
+              {/* <circle cx={10} cy={50} r="3" />
+              <circle cx={10} cy={80} r="3" /> */}
+              {data.slice(0,1000).map((data, index) => {
+                //console.log('drawing circle');
+                const highlight = data['Country Name'] === "China";
+                return (<circle 
+                            key={index} 
+                            cx={highlight ? size / 2 : size / 2 +20} 
+                            cy={size - margin - data['Adolescents out of school (% of lower secondary school age)']}  
+                            // cy={size - margin - 5}
+                            r="3" 
+                            fill="none"
+                            stroke={
+                              data['Country Name'] ==="China" 
+                                ? "red"
+                                : "steelblue"
+                              }
+                            strokeOpacity="0.2"
+                            // opacity=".2"
+                            />
+                  );
+                })}
+            </svg>
+
+
+
+            <h3><h3>Q3: </h3></h3>
+            <svg 
+              width={size} 
+              height={size}  
+              style={{ border: "1px solid black" }}>
+              {/* <circle cx={10} cy={50} r="3" />
+              <circle cx={10} cy={80} r="3" /> */}
+              {data.slice(0,1000).map((data, index) => {
+                //console.log('drawing circle');
+                const highlight = data['Country Name'] === "China";
+                return (<circle 
+                            key={index} 
+                            cx={highlight ? size / 2 : size / 2 +20} 
+                            cy={size - margin - data['Adolescents out of school (% of lower secondary school age)']}  
+                            // cy={size - margin - 5}
+                            r="3" 
+                            fill="none"
+                            stroke={
+                              data['Country Name'] ==="China" 
+                                ? "red"
+                                : "steelblue"
+                              }
+                            strokeOpacity="0.2"
+                            // opacity=".2"
+                            />
+                  );
+                })}
+            </svg>

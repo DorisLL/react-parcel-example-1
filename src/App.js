@@ -1,5 +1,6 @@
 import React from "react";
 import { useFetch } from "./hooks/useFetch";
+import { A2 } from "./A2";
 import { csv } from "d3-fetch";
 import { scaleLinear } from "d3-scale";
 import { extent, max, min } from "d3-array";
@@ -174,13 +175,13 @@ export default function App() {
             y2={size - margin - 100}
             stroke={"black"}
           />
-          <line
+          {/* <line
             x1={size / 2 - 10}
             y1={size - margin}
             x2={size / 2 - 5}
             y2={size - margin}
             stroke={"black"}
-          />
+          /> */}
           {data.slice(0,1000).map((data, index) => {
             //console.log('drawing circle');
             const highlight = data['Country Code'] === "AUS";
@@ -232,73 +233,8 @@ export default function App() {
   
 
   function Assignment2() {
-    const size = 500;
-    const margin = 20;
-    const axisTextAlignmentFactor = 3;
-    const [data, loading] = useFetch(
-      "https://raw.githubusercontent.com/DorisLL/react-parcel-example-1/main/data/education.csv"
-  )
-  console.log("from hook", loading, data);
-    return (
-        <div>
-            <h1>Assignment 2: Exploratory Data Analysis</h1>
-            <p>Data!</p>
-            <p>{loading && "Loading Data!"} </p>
-            <h3>Rendering Lines Example 1</h3>
-            <svg 
-              width={size} 
-              height={size}  
-              style={{ border: "1px solid black" }}>
-              {/* <circle cx={10} cy={50} r="3" />
-              <circle cx={10} cy={80} r="3" /> */}
-              {data.slice(0,1000).map((data, index) => {
-                //console.log('drawing circle');
-                const highlight = data['Country Name'] === "China";
-                return (<line 
-                            key={index} 
-                            x1 = {size / 2}
-                            y1 = {size - margin - data['Adolescents out of school (% of lower secondary school age)']}
-                            x2 = {size / 2 + 20}
-                            y2 = {size - margin - data['Adolescents out of school (% of lower secondary school age)']}
-                            stroke={
-                              highlight ? "red" : "steelblue"
-                              }
-                            strokeOpacity={highlight ? 1 : "0.2"}
-                            // opacity=".2"
-                            />
-                  );
-                })}
-            </svg>
-            <h3>Rendering Circles: Example 2</h3>
-            <svg 
-              width={size} 
-              height={size}  
-              style={{ border: "1px solid black" }}>
-              {/* <circle cx={10} cy={50} r="3" />
-              <circle cx={10} cy={80} r="3" /> */}
-              {data.slice(0,1000).map((data, index) => {
-                //console.log('drawing circle');
-                const highlight = data['Country Name'] === "China";
-                return (<circle 
-                            key={index} 
-                            cx={highlight ? size / 2 : size / 2 +20} 
-                            cy={size - margin - data['Adolescents out of school (% of lower secondary school age)']}  
-                            // cy={size - margin - 5}
-                            r="3" 
-                            fill="none"
-                            stroke={
-                              data['Country Name'] ==="China" 
-                                ? "red"
-                                : "steelblue"
-                              }
-                            strokeOpacity="0.2"
-                            // opacity=".2"
-                            />
-                  );
-                })}
-            </svg>
-        </div>
-    );
+    const Assignment2 = A2();
+    return Assignment2
   }
   
 
